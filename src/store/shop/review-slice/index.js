@@ -11,7 +11,7 @@ export const addReview = createAsyncThunk(
   async (formdata) => {
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/shop/review/add`,
+        `https://ecom-backend-gilt-chi.vercel.app/api/shop/review/add`,
         formdata
       );
       console.log("response", response);
@@ -28,7 +28,7 @@ export const addReview = createAsyncThunk(
 
 export const getReviews = createAsyncThunk("/order/getReviews", async (id) => {
   const response = await axios.get(
-    `http://localhost:5000/api/shop/review/${id}`
+    `https://ecom-backend-gilt-chi.vercel.app/api/shop/review/${id}`
   );
 
   return response.data;
